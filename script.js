@@ -66,6 +66,10 @@ const addCarrinhoeLocalStorage = async (id) => {
   itemsCart.appendChild(obj);
   saveCartItems(itemsCart.innerHTML);
   calculaPreço();
+  const button = document.querySelector('.empty-cart');
+  button.addEventListener('click', () => {
+  document.querySelector('.cart__items').innerHTML = '';
+  });
 };
 
 const listaItens = async () => {
