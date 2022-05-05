@@ -29,16 +29,14 @@ function getSkuFromProductItem(item) {
 
 function cartItemClickListener(event) {
   const remove = event.target;
-  remove.innerText = '';
+  remove.innerHTML = '';
   return remove;
 }
 
 function createCartItemElement({ sku, name, salePrice }) {
   const li = document.createElement('li');
   li.className = 'cart__item';
-  li.innerText = `SKU: ${sku} | NAME: ${name} | PRICE: $${salePrice}
-  
-  `;
+  li.innerText = `SKU: ${sku} | NAME: ${name} | PRICE: $${salePrice}`;
   li.addEventListener('click', cartItemClickListener);
   return li;
 }
