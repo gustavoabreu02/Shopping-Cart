@@ -1,3 +1,17 @@
+const carregando = () => {
+  const section = document.querySelector('.items');
+  const h3 = document.createElement('h3');
+  h3.innerText = 'carregando...';
+  h3.className = 'loading';
+  section.appendChild(h3);
+  };
+
+const removeCarregando = () => {
+ const h3 = document.querySelector('.loading');
+ console.log(h3);
+ h3.remove();
+};
+
 const calculaPreço = () => {
   let a = 0;
   const h2 = document.querySelector('.total-price');
@@ -58,6 +72,7 @@ function createCartItemElement({ sku, name, salePrice }) {
 
 const addCarrinhoeLocalStorage = async (id) => {
   const resul = await fetchItem(id);
+  console.log(resul);
   const obj = createCartItemElement({
     sku: resul.id,
     name: resul.title,
@@ -74,7 +89,9 @@ const addCarrinhoeLocalStorage = async (id) => {
 
 const listaItens = async () => {
   const section = document.querySelector('.items');
+  carregando();
   const resul = await fetchProducts('computador');
+  removeCarregando();
   resul.forEach((value) => section.appendChild(createProductItemElement({
     sku: value.id,
     name: value.title,
