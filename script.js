@@ -8,7 +8,6 @@ const carregando = () => {
 
 const removeCarregando = () => {
  const h3 = document.querySelector('.loading');
- console.log(h3);
  h3.remove();
 };
 
