@@ -1,4 +1,4 @@
-# Projeto Shopping-Cart
+# Projeto ShoppingCart
 
 Este projeto tem como objetivo criar uma página que integra com a API do Mercado Livre e permite que o usuário visualize uma lista de produtos relacionados à busca "computador", adicione os produtos desejados a um carrinho de compras e visualize o valor total do carrinho. Além disso, o projeto implementa testes unitários para garantir a qualidade do código.
 
