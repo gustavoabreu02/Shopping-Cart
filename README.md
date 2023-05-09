@@ -47,4 +47,4 @@ O projeto implementa testes unitários utilizando a biblioteca Jest. Os testes c
 
 ## Autor
 
-Esse projeto foi desenvolvido por @gustavoabreu02.
+Esse projeto foi desenvolvido por - [@gustavoabreu02](https://www.github.com/gustavoabreu02).
